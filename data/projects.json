@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Kochii",
+      "technologies": "Angular / ExpressJS / MongoDB",
+      "description": "Simplify your day to day life by letting Kochii assist you in managing your pantry cabinets and cooking ingredients.",
+      "link": "https://www.kochii.app/",
+      "imgSrc": "/images/kochii-preview.jpg",
+      "imgAlt": "Kochii's landing page on a laptop"
+    },
+    {
+      "id": "2",
+      "title": "Habitus",
+      "technologies": "ReactJS / ExpressJS / PostgreSQL",
+      "description": "Discuss Anywhere. Post your comment anywhere. Bypass censorships!",
+      "link": "https://habitus.app/",
+      "imgSrc": "/images/habitus-preview.jpg",
+      "imgAlt": "Habitus being used on google chrome"
+    },
+    {
+      "id": "3",
+      "title": "Takugen",
+      "technologies": "Python",
+      "description": "Translates keystrokes to the specified language in relation to the English alphabet's phonetics.",
+      "link": "https://github.com/jeffreyrampineda/takugen",
+      "imgSrc": "/images/takugen-preview.png",
+      "imgAlt": "Roman alphabet translated to hiragana with Takugen"
+    }
+  ]
+}

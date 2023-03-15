@@ -1,0 +1,123 @@
+@import "./spacings";
+@import "./mixins";
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    padding-left: 256px;
+    padding-right: 256px;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background-color: $bg-color-light-grey;
+  color: $text-color-dark;
+  padding: 1.25em 4.25em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  &--sm {
+    padding: 8px 24px;
+  }
+}
+
+.hover-grow {
+  &-1 {
+    transition: 0.25s;
+    &:hover {
+      transition: 0.25s;
+      transform: scale(1.025);
+    }
+  }
+  &-2 {
+    transition: 0.25s;
+    &:hover {
+      transition: 0.25s;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.animation-slide-left {
+  opacity: 0;
+  animation: slide-left 0.7s ease-in-out 1 forwards;
+}
+
+.animation-slide-right {
+  opacity: 0;
+  animation: slide-right 0.7s ease-in-out 1 forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translate(-20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(-45deg, #273441, #212c36, #233d47, #23473c);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-shapes {
+  background-image: url("/images/shapes-background.svg");
+  animation: shapes-animation 20s ease infinite;
+}
+
+@keyframes shapes-animation {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+  50% {
+    background-position-x: -50vw;
+    background-position-y: 50vh;
+  }
+  100% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
