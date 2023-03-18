@@ -1,0 +1,85 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.hero {
+  height: 100vh;
+  color: $text-color-white;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include tablet {
+    padding-top: 32px;
+  }
+  @include desktop {
+    padding-top: 25vh;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__intro {
+      width: 45%;
+
+      &--title {
+        font-size: 5rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      &--links {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      &--icon {
+        color: $text-color-grey;
+        font-size: 1.75rem;
+        transition: 0.3s;
+
+        &:hover {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__summary {
+      width: 45%;
+
+      &--title {
+        font-size: 3rem;
+        font-weight: 200;
+      }
+
+      &--heading {
+        color: $text-color-grey;
+        line-height: 1.5;
+      }
+
+      &--description {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__next {
+    padding-bottom: 5vh;
+    text-align: center;
+
+    &--link {
+    }
+
+    &--icon {
+      color: $text-color-grey;
+      font-size: 4rem;
+      transition: 0.3s;
+
+      &:hover {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.footer {
+  padding-top: 64px;
+  color: $text-color-white;
+
+  &--title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  &__previous {
+    text-align: center;
+
+    &--link {
+    }
+
+    &--icon {
+      color: $text-color-grey;
+      font-size: 4rem;
+    }
+  }
+
+  &__content {
+    &--description {
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    &--links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &--icon {
+      color: $text-color-grey;
+      font-size: 1.75rem;
+      transition: 0.3s;
+    }
+  }
+
+  &--foot {
+    text-align: center;
+    color: $text-color-grey;
+  }
+}

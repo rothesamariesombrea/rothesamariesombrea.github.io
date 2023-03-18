@@ -1,0 +1,40 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: 0.5s;
+
+  &.bg-dark {
+    background-color: #ff8ca8;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 16px;
+    list-style-type: none;
+    transition: 0.4s;
+
+    &--item {
+    }
+
+    &--link {
+      text-decoration: none;
+      color: $text-color-white;
+      padding: 1rem;
+
+      &:hover {
+        color: #d34f70;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.learn-more {
+  min-height: 100vh;
+  background-color: $bg-color-light;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+  @include tablet {
+    padding: 32px;
+  }
+  @include desktop {
+    padding: 128px 256px 128px 256px;
+  }
+
+  &--title {
+    font-size: 2.75rem;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #d34f70;
+    @include tablet {
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__intro {
+      width: 100%;
+      @include desktop {
+        display: block;
+        width: 60%;
+      }
+
+      &--description {
+        font-size: 1.25rem;
+        font-weight: 200;
+        line-height: 1.2;
+      }
+    }
+
+    &__banner {
+      display: none;
+      width: 100%;
+      @include desktop {
+        display: block;
+        width: 40%;
+      }
+
+      &--image {
+        width: 100%;
+      }
+    }
+  }
+}

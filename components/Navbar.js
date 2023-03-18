@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import styles from "./Navbar.module.scss";
 
-const Navbar = () => {
+const Navbar = ({ isDark = false }) => {
   const [useDarkNav, setUseDarkNav] = useState(false);
 
   useEffect(() => {
@@ -14,25 +15,34 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar container ${useDarkNav ? "bg-dark" : ""}`}>
-      <ul className="navbar__nav">
-        <li className="navbar__nav--item hover-grow-2">
-          <a className="navbar__nav--link" href="/#">
+    <nav
+      className={`${styles["navbar"]} container ${
+        useDarkNav || isDark ? styles["bg-dark"] : null
+      }`}
+    >
+      <ul className={styles["navbar__nav"]}>
+        <li className={`${styles["navbar__nav--item"]} hover-grow-2`}>
+          <a className={styles["navbar__nav--link"]} href="/#">
             Home
           </a>
         </li>
-        <li className="navbar__nav--item hover-grow-2">
-          <a className="navbar__nav--link" href="#projects">
-            Projects
+        <li className={`${styles["navbar__nav--item"]} hover-grow-2`}>
+          <a className={styles["navbar__nav--link"]} href="/#skills">
+            Skills
           </a>
         </li>
-        <li className="navbar__nav--item hover-grow-2">
-          <a className="navbar__nav--link" href="#about">
+        <li className={`${styles["navbar__nav--item"]} hover-grow-2`}>
+          <a className={styles["navbar__nav--link"]} href="/blog">
+            Blog
+          </a>
+        </li>
+        <li className={`${styles["navbar__nav--item"]} hover-grow-2`}>
+          <a className={styles["navbar__nav--link"]} href="/#about">
             About
           </a>
         </li>
-        <li className="navbar__nav--item hover-grow-2">
-          <a className="navbar__nav--link" href="#contact">
+        <li className={`${styles["navbar__nav--item"]} hover-grow-2`}>
+          <a className={styles["navbar__nav--link"]} href="/#contact">
             Contact
           </a>
         </li>
