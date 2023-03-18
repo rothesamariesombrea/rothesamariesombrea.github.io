@@ -49,7 +49,7 @@ export default function About() {
         <div className={styles["about__content__banner"]}>
           <img
             className={`${styles["about__content__banner--image"]} hover-grow-2`}
-            src="/images/profile-picture.jpg"
+            src="/assets/images/profile-picture.jpg"
             alt="A profile picture of Rothesa Marie Sombrea"
           ></img>
         </div>

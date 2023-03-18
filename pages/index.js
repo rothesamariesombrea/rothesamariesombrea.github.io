@@ -15,7 +15,7 @@ export default function Home({ allPosts }) {
         <div className="bg-shapes">
           <Navbar></Navbar>
           <Intro></Intro>
-          <img src="/images/wave_top.svg"></img>
+          <img src="/assets/images/wave_top.svg"></img>
         </div>
       </div>
       <LearnMore></LearnMore>
@@ -25,7 +25,7 @@ export default function Home({ allPosts }) {
       </div>
       <div className="bg-gradient">
         <div className="bg-shapes">
-          <img src="/images/wave_bottom.svg"></img>
+          <img src="/assets/images/wave_bottom.svg"></img>
           <Footer></Footer>
         </div>
       </div>

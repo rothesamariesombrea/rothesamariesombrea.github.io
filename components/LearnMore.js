@@ -9,7 +9,7 @@ export default function LearnMore() {
       <div className={styles["learn-more__content"]}>
         <div className={styles["learn-more__content__banner"]}>
           <img
-            src="/images/undraw_data_re_80ws.svg"
+            src="/assets/images/undraw_data_re_80ws.svg"
             className={`${styles["learn-more__content__banner--image"]} hover-grow-1`}
             alt="Adjusting data"
           />
@@ -38,7 +38,7 @@ export default function LearnMore() {
         </div>
         <div className={styles["learn-more__content__banner"]}>
           <img
-            src="/images/undraw_growth_analytics_re_pyxf.svg"
+            src="/assets/images/undraw_growth_analytics_re_pyxf.svg"
             className={`${styles["learn-more__content__banner--image"]} hover-grow-1`}
             alt="Analyzing data"
           />
@@ -47,7 +47,7 @@ export default function LearnMore() {
       <div className={styles["learn-more__content"]}>
         <div className={styles["learn-more__content__banner"]}>
           <img
-            src="/images/undraw_team_collaboration_re_ow29.svg"
+            src="/assets/images/undraw_team_collaboration_re_ow29.svg"
             className={`${styles["learn-more__content__banner--image"]} hover-grow-1`}
             alt="Work collaboration"
           />
