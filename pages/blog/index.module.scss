@@ -1,0 +1,118 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.blog {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  &--title {
+    font-size: 2.75rem;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #d34f70;
+    @include tablet {
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "hero hero hero hero";
+  }
+
+  &__post-hero__container {
+    grid-area: hero;
+  }
+
+  &__post-hero {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cover cover cover details";
+
+    &__cover {
+      grid-area: cover;
+      height: 32rem;
+
+      &--image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        filter: brightness(90%);
+
+        &:hover {
+          filter: brightness(100%);
+        }
+      }
+    }
+    &__details {
+      grid-area: details;
+
+      &--title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        color: #d34f70;
+        font-size: 2.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      &--date-published {
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+      &--excerpt {
+        font-size: 1.25rem;
+        font-weight: 200;
+        line-height: 1.2;
+      }
+    }
+  }
+  &__post-sub__container {
+    grid-column: span 2;
+  }
+  &__post-sub {
+    &__cover {
+      height: 32rem;
+
+      &--image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        filter: brightness(90%);
+
+        &:hover {
+          filter: brightness(100%);
+        }
+      }
+    }
+
+    &__details {
+      grid-area: details;
+
+      &--title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        color: #d34f70;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      &--date-published {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+      &--excerpt {
+        font-size: 1.25rem;
+        font-weight: 200;
+        line-height: 1.2;
+      }
+    }
+  }
+}

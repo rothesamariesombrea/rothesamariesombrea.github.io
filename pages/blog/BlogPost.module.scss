@@ -1,0 +1,101 @@
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.post {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "main main main side";
+
+  &-main {
+    grid-area: main;
+
+    &--title {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 2.75rem;
+      font-weight: 200;
+      line-height: 1.2;
+      color: #d34f70;
+      @include tablet {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+    }
+    &--date-published {
+      margin-top: 16px;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+    &--content {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 1.25rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    &__cover {
+      height: 32rem;
+
+      &--image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-side {
+    grid-area: side;
+    &--title {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 1.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+      color: #d34f70;
+    }
+    &--about-me {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 1.25rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+    &__posts {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__post {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "title title title cover";
+
+      &--title {
+        grid-area: title;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      &__cover {
+        background-color: red;
+        grid-area: cover;
+        &--image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

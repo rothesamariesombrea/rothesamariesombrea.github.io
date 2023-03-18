@@ -1,10 +1,14 @@
+import { getAllPosts } from "../utils/api";
 import Navbar from "../components/Navbar";
 import Intro from "../components/Intro";
 import About from "../components/About";
-import Projects from "../components/Projects";
+import FeaturedBlog from "../components/FeaturedBlog";
 import Footer from "../components/Footer";
+import LearnMore from "../components/LearnMore";
 
-export default function Home() {
+export default function Home({ allPosts }) {
+  const featuredPosts = allPosts.slice(0, 4);
+
   return (
     <>
       <div className="bg-gradient">
@@ -14,7 +18,8 @@ export default function Home() {
           <img src="/images/wave_top.svg"></img>
         </div>
       </div>
-      <Projects></Projects>
+      <LearnMore></LearnMore>
+      <FeaturedBlog featuredPosts={featuredPosts}></FeaturedBlog>
       <div className="bg-white">
         <About></About>
       </div>
@@ -27,3 +32,18 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
+
+  return {
+    props: { allPosts },
+  };
+};
