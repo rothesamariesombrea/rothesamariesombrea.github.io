@@ -9,17 +9,13 @@ describe("Navbar", () => {
       "href",
       "/#"
     );
-    expect(screen.getByRole("link", { name: "Projects" })).toHaveAttribute(
-      "href",
-      "#projects"
-    );
     expect(screen.getByRole("link", { name: "About" })).toHaveAttribute(
       "href",
-      "#about"
+      "/#about"
     );
     expect(screen.getByRole("link", { name: "Contact" })).toHaveAttribute(
       "href",
-      "#contact"
+      "/#contact"
     );
   });
 });
