@@ -37,6 +37,7 @@ $grid-gap-lg: 32px;
     &__cover {
       grid-area: cover;
       height: 32rem;
+      background-color: #ffbdcd;
 
       &--image {
         height: 100%;
@@ -81,6 +82,7 @@ $grid-gap-lg: 32px;
   &__post-sub {
     &__cover {
       height: 32rem;
+      background-color: #ffbdcd;
 
       &--image {
         height: 100%;

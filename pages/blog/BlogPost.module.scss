@@ -41,6 +41,7 @@
 
     &__cover {
       height: 32rem;
+      background-color: #ffbdcd;
 
       &--image {
         height: 100%;
@@ -93,7 +94,7 @@
       }
 
       &__cover {
-        background-color: red;
+        background-color: #ffbdcd;
         grid-area: cover;
         height: 4rem;
         &--image {
