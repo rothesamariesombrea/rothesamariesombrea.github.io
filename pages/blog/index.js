@@ -41,8 +41,8 @@ export default function BlogIndex({ allPosts }) {
               </div>
             </a>
           </div>
-          {posts.map((post) => (
-            <div className={styles["blog__post-sub__container"]}>
+          <div className={styles["blog__post-sub__container"]}>
+            {posts.map((post) => (
               <a
                 className="post-card"
                 key={post.slug}
@@ -73,8 +73,8 @@ export default function BlogIndex({ allPosts }) {
                   </div>
                 </div>
               </a>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
       <div className="bg-gradient">

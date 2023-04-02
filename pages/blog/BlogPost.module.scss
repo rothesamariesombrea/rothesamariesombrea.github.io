@@ -41,6 +41,7 @@
 
     &__cover {
       height: 32rem;
+      background-color: #ffbdcd;
 
       &--image {
         height: 100%;
@@ -54,15 +55,15 @@
     grid-area: side;
     &--title {
       margin-top: 32px;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+      border-top: 1px solid;
+      padding-top: 16px;
       font-size: 1.5rem;
-      font-weight: 200;
+      font-weight: 300;
       line-height: 1.2;
       color: #d34f70;
     }
     &--about-me {
-      margin-top: 32px;
-      margin-bottom: 32px;
       font-size: 1.25rem;
       font-weight: 200;
       line-height: 1.2;
@@ -82,14 +83,20 @@
 
       &--title {
         grid-area: title;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         font-weight: 400;
-        line-height: 1.2;
+        line-height: 1.25;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
       }
 
       &__cover {
-        background-color: red;
+        background-color: #ffbdcd;
         grid-area: cover;
+        height: 4rem;
         &--image {
           height: 100%;
           width: 100%;

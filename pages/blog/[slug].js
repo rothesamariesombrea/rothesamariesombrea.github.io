@@ -35,45 +35,27 @@ export default function BlogPost({ post, allPosts, morePosts, preview }) {
 
           <h2 className={styles["post-side--title"]}>More posts</h2>
           <div className={styles["post-side__posts"]}>
-            <div className={styles["post-side__post"]}>
-              <div className={styles["post-side__post--title"]}>
-                <h1 className={styles["post-side__post--title"]}>
-                  {post.title}
-                </h1>
-              </div>
-              <div className={styles["post-side__post__cover"]}>
-                <img
-                  className={styles["post-side__post__cover--image"]}
-                  src={post.coverImage}
-                ></img>
-              </div>
-            </div>
-            <div className={styles["post-side__post"]}>
-              <div className={styles["post-side__post--title"]}>
-                <h1 className={styles["post-side__post--title"]}>
-                  {post.title}
-                </h1>
-              </div>
-              <div className={styles["post-side__post__cover"]}>
-                <img
-                  className={styles["post-side__post__cover--image"]}
-                  src={post.coverImage}
-                ></img>
-              </div>
-            </div>
-            <div className={styles["post-side__post"]}>
-              <div className={styles["post-side__post--title"]}>
-                <h1 className={styles["post-side__post--title"]}>
-                  {post.title}
-                </h1>
-              </div>
-              <div className={styles["post-side__post__cover"]}>
-                <img
-                  className={styles["post-side__post__cover--image"]}
-                  src={post.coverImage}
-                ></img>
-              </div>
-            </div>
+            {allPosts.map((sidePost) => (
+              <a
+                className="post-card"
+                key={sidePost.slug}
+                href={`/blog/${sidePost.slug}`}
+              >
+                <div className={styles["post-side__post"]}>
+                  <div className={styles["post-side__post--title"]}>
+                    <h3 className={styles["post-side__post--title"]}>
+                      {sidePost.title}
+                    </h3>
+                  </div>
+                  <div className={styles["post-side__post__cover"]}>
+                    <img
+                      className={styles["post-side__post__cover--image"]}
+                      src={sidePost.coverImage}
+                    ></img>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -85,6 +67,15 @@ export default function BlogPost({ post, allPosts, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params }) {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
+
   const post = getPostBySlug(params.slug, [
     "title",
     "date",
@@ -98,6 +89,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      allPosts,
       post: {
         ...post,
         content,
