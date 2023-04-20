@@ -20,18 +20,28 @@
 
 .btn {
   text-decoration: none;
-  background-color: $bg-color-light-grey;
-  color: $text-color-dark;
-  padding: 1.25em 4.25em;
+  background-color: $bg-color-light;
+  color: $text-color-grey;
+  padding: .75em 3.25em;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 400;
+  border-color: $text-color-grey;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 1.5rem;
+  font-weight: 500;
   cursor: pointer;
 
   &--sm {
     padding: 8px 24px;
   }
+}
+
+.mark {
+  display: inline-block;
+  color: #d34f70;
+  background-color: $bg-color-light;
+  padding: 2px 4px 2px 4px;
 }
 
 .hover-grow {

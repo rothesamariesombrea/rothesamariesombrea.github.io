@@ -43,13 +43,6 @@ img {
   vertical-align: middle;
 }
 
-.mark {
-  display: inline-block;
-  color: #d34f70;
-  background-color: $bg-color-light;
-  padding: 2px 4px 2px 4px;
-}
-
 .post-card:hover {
   & h3 {
     text-decoration: underline;
